@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Max Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif;
+  color: #2c1e1e;
+  background-color: #A29C9B;
+  line-height: 1.6;
+}
+
+/* Header */
+.encabezado {
+  background-color: #1f3b4d;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.encabezado a {
+  text-decoration: none;
+  color: #f5f0e1;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+}
+
+.encabezado a:hover {
+  background-color: rgba(64, 68, 89, 0.6);
+  color: #c9a66b;
+}
+
+/* Main */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #1f3b4d;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+/* Contact Container */
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: #f5f0e1;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario */
+.formulario-contacto {
+  flex: 1 1 45%;
+}
+
+.formulario-contacto h2 {
+  color: #1f3b4d;
+  margin-bottom: 1rem;
+}
+
+.formulario-contacto form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formulario-contacto label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+#buttonConfirm {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
+
+#buttonConfirm.habilitado {
+  background-color: #28a745;
+  /* verde */
+  cursor: pointer;
+}
+
+/* Info Contacto */
+.info-contacto {
+  flex: 1 1 45%;
+}
+
+.info-contacto h2,
+.info-contacto h3 {
+  color: #1f3b4d;
+  margin-top: 1rem;
+}
+
+.info-contacto p,
+.info-contacto a {
+  font-size: 1rem;
+  color: #2c1e1e;
+}
+
+.boton-reserva {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: #1f3b4d;
+  color: #f5f0e1;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.boton-reserva:hover {
+  background-color: #c9a66b;
+  color: #2c1e1e;
+}
+
+/* Redes sociales */
+.redes-sociales {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.red-social {
+  text-decoration: none;
+  color: #1f3b4d;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.red-social:hover {
+  color: #c9a66b;
+}
+
+/* Mapa */
+.mapa {
+  margin-top: 2rem;
+  background-color: #f5f0e1;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.mapa h2 {
+  color: #1f3b4d;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #1f3b4d;
+  color: #f5f0e1;
+  padding: 1rem 0;
+  margin-top: 3rem;
+}
+
+
+/* --------------------------------------- */
+/* Estilos para formulario con clases personalizadas */
+
+/* Registro/contacto - Estructura común de formularios */
+.primary__main__form {
+  max-width: 500px;
+  /* Limita ancho máximo */
+  margin: 0 auto;
+  /* Centra horizontalmente */
+  padding: 1rem 1.5rem;
+  /* Espacio interno */
+  background-color: #f5f0e1;
+  /* Un fondo suave para destacarlo */
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.primary__main__form__sectionLeft {
+  gap: 1rem;
+}
+
+
+/* Etiquetas del formulario */
+.primary__main__form__sectionLeft__label {
+  font-weight: bold;
+  color: #1f3b4d;
+  margin-bottom: 0.3rem;
+}
+
+/* Campos de error */
+.campo-con-error {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Estilo de errores */
+.mensaje-error {
+  color: red;
+  font-size: 0.85rem;
+  font-weight: 500;
+  height: 1rem;
+  /* Reserva espacio para que no se mueva el diseño */
+}
+
+/* Inputs, selects y textareas del formulario principal */
+.primary__main__form input,
+.primary__main__form select,
+.primary__main__form textarea {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #fff;
+  width: 100%;
+}
+
+/* Botón enviar */
+.primary__main__form button[type="submit"] {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.primary__main__form button:disabled {
+  background-color: gray;
+  color: white;
+  cursor: not-allowed;
+}
+
+.primary__main__form button.habilitado {
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contacto-container {
+    flex-direction: column;
+  }
+
+  .formulario-contacto,
+  .info-contacto {
+    flex: 1 1 100%;
+  }
+}

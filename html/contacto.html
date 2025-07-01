@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/headerstyles.css">
+    <title>Contacto - Hecate Restaurant</title>
+</head>
+<body>
+    <header>
+  <nav class="encabezado">
+    <a href="inicio.html">Inicio</a>
+    <a href="menu.html">Menú</a>
+    <a href="nuestrahistoria.html">Nuestra Historia</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+</header>
+
+
+    <main>
+        <h1>Contacto</h1>
+
+        <section class="contacto-container">
+            <article class="formulario-contacto">
+                <h2>Escríbanos</h2>
+                <p>Complete el siguiente formulario para consultas, reservas o comentarios. Nos pondremos en contacto con usted a la brevedad.</p>
+
+                <form class="primary__main__form" action="" method="get" id="registerForm">
+  <section class="primary__main__form__sectionLeft">
+    
+    <label class="primary__main__form__sectionLeft__label" for="nombre">Nombre</label>
+    <div class="campo-con-error">
+      <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+      <p id="error-nombre" class="mensaje-error js-nombre-error"></p>
+    </div>
+
+    <label class="primary__main__form__sectionLeft__label" for="apellido">Apellido</label>
+    <div class="campo-con-error">
+      <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido">
+      <p id="error-apellido" class="mensaje-error js-apellido-error"></p>
+    </div>
+
+    <label class="primary__main__form__sectionLeft__label" for="telefono">Teléfono</label>
+    <div class="campo-con-error">
+      <input type="text" id="telefono" name="telefono" placeholder="Ingrese su teléfono">
+      <p id="error-telefono" class="mensaje-error js-telefono-error"></p>
+    </div>
+
+    <label class="primary__main__form__sectionLeft__label" for="mail">E-mail</label>
+    <div class="campo-con-error">
+      <input type="email" id="mail" name="mail" placeholder="Ingrese su email">
+      <p id="error-mail" class="mensaje-error js-mail-error"></p>
+    </div>
+
+    <label class="primary__main__form__sectionLeft__label" for="motivo">Motivo de contacto</label>
+    <div class="campo-con-error">
+      <select id="motivo" name="motivo">
+        <option value="reserva">Reserva</option>
+        <option value="consulta">Consulta</option>
+        <option value="evento">Evento privado</option>
+        <option value="comentario">Comentario</option>
+      </select>
+      <p id="error-motivo" class="mensaje-error js-motivo-error"></p>
+    </div>
+
+    <label class="primary__main__form__sectionLeft__label" for="observacion">Mensaje</label>
+    <div class="campo-con-error">
+      <textarea id="observacion" name="observacion" rows="5" placeholder="Escriba su mensaje"></textarea>
+      <p id="error-observacion" class="mensaje-error js-observacion-error"></p>
+    </div>
+
+    <button type="submit" id="buttonConfirm" disabled>Enviar Mensaje</button>
+
+  </section>
+</form>
+            </article>
+
+            <aside class="info-contacto">
+                <h2>Información de contacto</h2>
+                <address>
+                    <p><strong>Dirección:</strong> Avenida Corrientes 1234, Buenos Aires</p>
+                    <p><strong>Teléfono:</strong> <a href="tel:+5491112345678">+54 9 11 1234-5678</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:contacto@hecaterestaurant.com">contacto@hecaterestaurant.com</a></p>
+                </address>
+                
+                <section>
+                    <h3>Horarios de atención</h3>
+                    <p><strong>Lunes a Jueves:</strong> 12:00 - 15:00 y 19:00 - 23:00</p>
+                    <p><strong>Viernes y Sábados:</strong> 12:00 - 15:00 y 19:00 - 00:00</p>
+                    <p><strong>Domingos:</strong> 12:00 - 17:00</p>
+                </section>
+                
+                <section>
+                    <h3>Reservas</h3>
+                    <p>Para reservas inmediatas, llámenos al <a href="tel:+5491112345678">+54 9 11 1234-5678</a> o reserve online:</p>
+                    <a href="./reservarmesa.html" class="boton-reserva">Reservar Mesa</a>
+                </section>
+                
+                <section>
+                    <h3>Síganos en redes sociales</h3>
+                    <nav class="redes-sociales"> 
+                        <a href="#" class="red-social">Instagram</a>
+                        <a href="#" class="red-social">Facebook</a>
+                        <a href="#" class="red-social">Twitter</a>
+                    </nav>
+                </section>
+            </aside>
+        </section>
+
+        <section class="mapa">
+            <h2>Cómo llegar</h2>
+            <p>Estamos ubicados en el corazón de Buenos Aires, a pocas cuadras del Obelisco.</p>
+            <!-- Aquí iría un mapa si decides agregar uno en el futuro -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hecate Restaurant - Todos los derechos reservados</p>
+    </footer>
+    
+    <script src="../js/contacto.js"></script>
+</body>
+</html>

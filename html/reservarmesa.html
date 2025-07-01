@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/reservarmesa.css">
+  <title>Reservar mensa</title>
+</head>
+
+<body>
+
+  <h1>Reserva tu Mesa</h1>
+  <form id="reservaForm">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="personas">Cantidad de personas:</label>
+    <input type="number" id="personas" min="1" max="10" required>
+    <p id="error-personas" class="mensaje-error js-personas-error"></p>
+
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" required>
+
+    <label for="hora">Hora:</label>
+    <select id="hora" required>
+      <option value="">Seleccionar hora</option>
+      <option value="12:00">12:00</option>
+      <option value="13:00">13:00</option>
+      <option value="20:00">20:00</option>
+      <option value="21:00">21:00</option>
+    </select>
+
+    <label>
+      <input type="checkbox" id="terraza">
+      ¿Querés sentarte en la terraza?
+    </label>
+
+    <button type="submit">Reservar</button>
+    <button type="button" id="verReservas">Ver Reservas</button>
+    <div class="mensaje-exito" id="mensajeExito"></div>
+    <div id="contenedorReservas" class="contenedor-reservas" >
+    </div>
+
+
+  </form>
+  <script src="../js/reservarmesa.js"></script>
+  <a href="contacto.html" class="btn-volver">Volver a Contacto</a>
+</body>
+
+</html>
