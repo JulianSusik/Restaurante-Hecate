@@ -2,7 +2,7 @@ const MESSAGES = {
   personas: "Se cobrara una seña si la reserva es para 6 o mas personas"
 }
 const reservarForm = document.querySelector('#reservaForm');
-const reservas = JSON.parse(localStorage.getItem("reservas")) || []; // Array donde guardamos todas las reservas
+const reservas = JSON.parse(localStorage.getItem("reservas")) || []; 
 
 function enviarFormulario(e) {
   e.preventDefault();
@@ -23,7 +23,6 @@ function enviarFormulario(e) {
   };
   
   
-  // Verificar si el usuario o correo ya existe
   const reservaRepetida = reservas.some(function(r){
     return r.fecha === fecha && r.hora === hora;
   });
@@ -37,11 +36,11 @@ function enviarFormulario(e) {
   
   console.log('Reserva registrada:', reserva);
   console.log('Reservas actuales:', reservas);
-  reservas.push(reserva); // Guardamos en el array
+  reservas.push(reserva); 
   
    localStorage.setItem("reservas", JSON.stringify(reservas))
    
-  reservarForm.reset(); // Limpiar el formulario
+  reservarForm.reset(); 
   console.log(reservarForm);
 }
 
@@ -59,28 +58,13 @@ function manejarCambioCantidad(e) {
 }
 
 
-//-----------------DOS FORMAS DE HACER LO MISMO, CON UNA FUNCION APARTE, O CON UNA FUNCION ANONIMA------------
-/*
-inputPersonas.addEventListener('change', (e) => {
-  
-  const cantidad = parseInt(e.target.value); // e.target.value Hace referencia al input que disparó el evento, en este caso el input de cantidad de personas y luego accede al valor con el .value
-  if (cantidad >= 6) {
-    mensajeSeña.textContent = MESSAGES.personas;
-    } else {
-      mensajeSeña.textContent = "";
-  }
-  console.log('Cantidad de personas:', cantidad);
-  });
-  */
-
-
 const btnVerReservas = document.getElementById('verReservas')
 const contenedorReservas = document.querySelector('#contenedorReservas');
 
 function mostrarReserva(e) {
   e.preventDefault();
   contenedorReservas.classList.add('show-contenedor-reservas')
-  console.log(reservas); // Muestra el array de reservas por consola 
+  console.log(reservas); 
 if (reservas.length === 0) {
     contenedorReservas.innerHTML = "<p>No hay reservas registradas.</p>";
     return;

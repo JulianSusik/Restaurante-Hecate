@@ -3,7 +3,6 @@ function actualizarEstadoBoton() {
   const submitBtn = registerForm.querySelector('#buttonConfirm');
 
 
-  // Obtener todos los campos básicos (aca se usan para verificar que esten completos, despues dentro de la funcion registerValidate se vuelven a obetner para validar mas a fondo)
   const nombre = registerForm.querySelector('#nombre').value.trim();
   const apellido = registerForm.querySelector('#apellido').value.trim();
   const correo = registerForm.querySelector('#mail').value.trim();
@@ -27,7 +26,7 @@ console.log('Clases del botón:', submitBtn.classList.value);
 }
 
 
-// ✅ Agregás los eventos de forma individual
+
 const registerForm = document.getElementById('registerForm');
 
 const nombreInput = registerForm.querySelector('#nombre');
@@ -42,5 +41,5 @@ correoInput.addEventListener('input', actualizarEstadoBoton);
 telefonoInput.addEventListener('input', actualizarEstadoBoton);
 mensajeTextArea.addEventListener('input', actualizarEstadoBoton);
 
-// Ejecutar al cargar por si ya hay datos
+
 actualizarEstadoBoton();
